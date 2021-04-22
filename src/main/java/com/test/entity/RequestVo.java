@@ -17,4 +17,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class RequestVo {
 
+    /**
+     * 名称
+     */
+    private String name;
+
 }
