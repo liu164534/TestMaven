@@ -1,0 +1,10 @@
+#spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.168.19.12:8848,192.168.19.13:8848
+#        register-enabled: true
+#        # 命名空间
+#        namespace: 6fc52b09-47a2-4c6c-ab8e-dbc1726ce9fd
+
+# 需要在nacos的配置文件中设置这些参数，否则注册不了
