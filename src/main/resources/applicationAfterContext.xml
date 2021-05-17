@@ -3,11 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!-- 没有使用Bean的后置处理器-->
+<!--    default-init-method:为应用上下文中所有的Bean设置共同的初始化方法
+        default-destroy-method:为应用上下文中所有的Bean设置了共同的销毁方法-->
+    <!-- 使用Bean的后置处理器-->
 
     <!-- init-method：指定初始化的方法
          destroy-method：指定销毁的方法 -->
     <bean id="student" class="com.abcd.beanlife.Student" init-method="initStudent" destroy-method="destroyStudent">
-        <property name="name" value="Manmba"></property>
+        <property name="name" value="Eason"></property>
     </bean>
+
+    <!-- 配置bean的后置处理器,不需要id，IoC容器自动识别是一个BeanPostProcessor -->
+    <bean class="com.abcd.beanlife.MyBeanPostProcessor"></bean>
 </beans>

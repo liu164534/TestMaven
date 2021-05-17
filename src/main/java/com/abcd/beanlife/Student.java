@@ -5,6 +5,7 @@ import org.springframework.beans.factory.BeanNameAware;
 /**
  * @program: TestMaven
  * @description: 一个学生类(Bean), 能体现其生命周期的Bean
+ * 没有使用Bean的后置处理器
  * @author: Liu Xinpeng
  * @create: 2021-05-13 17:11
  **/
@@ -61,4 +62,8 @@ public class Student implements BeanNameAware {
     public void setBeanName(String name) {
         System.out.println("调用BeanNameAware的setBeanName()...");
     }
+
+
+
+
 }

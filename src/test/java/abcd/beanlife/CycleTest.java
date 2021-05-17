@@ -13,6 +13,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  **/
 public class CycleTest {
 
+
+    /**
+     * Bean的生命周期
+     */
     @Test
     public void test() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -22,5 +26,21 @@ public class CycleTest {
         System.out.println(student);
         // 关闭容器
         context.close();
+    }
+
+
+    /**
+     * 有后置处理的bean的生命周期
+     */
+    @Test
+    public void afterBeanTest() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationAfterContext.xml");
+        Student student = (Student) context.getBean("student");
+        // Bean的使用
+        student.play();
+        System.out.println(student);
+        // 关闭容器
+        context.close();
+
     }
 }
