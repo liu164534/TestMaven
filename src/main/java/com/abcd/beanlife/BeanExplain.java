@@ -40,4 +40,30 @@ public class BeanExplain {
      *  -postProcessBeforeInitialization方法
      *  -postProcessAfterInitialization方法
      */
+
+    /**
+     * 在Spring中，那些组成应用程序的主体及由Spring Ioc容器所管理的对象，被称为bean。简单的说，bean就是由Ioc容器初始化、装配及管理
+     * 的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了。而bean的定义以及bean相互间的依赖关系将通过配置元数据来描述。
+     *
+     * Spring中bean默认都是单例的，对于web来说，web容器对于每个用户请求都创建一个单独的Sevlet线程来处理请求，引入Spring 框架之后，
+     * 每个Action都是单例的，那么对于Spring托管的单例Service Bean，Spring的单例是基于BeanFactory也就是Spring容器的，单例bean
+     * 在此容器内只有一个，Java的单例是基于JVM的，每个JVM内只有一个实例
+     */
+
+    /**
+     * Bean的作用域
+     *
+     * singleton ：在springIoc容器中仅存在一个Bean实例，Bean以单例的形式存在，默认值
+     * prototype : 每次从容器中调用Bean时，都会返回一个新的实例，即每次调用getBean()时，想当于执行new XxxBean()
+     * request : 每次HTTP请求都会创建一个新的Bean,该作用域仅适用于WebApplicationContext环境
+     * session : 同一个HTTP Session 共享一个Bean,不同Session使用不同Bean,仅适用于WebApplicationContext环境
+     * globalSession : 一般用于Portlet应用环境，该作用域仅适用于WebApplicationContext环境
+     */
+
+    /**
+     * 1 servlet容器需要在应用项目启动的时候，给应用初始化一个ServletContext作为公共环境容器存放公共信息
+     * 2 WebApplicationContext,是继承ApplicationContext的一个接口，扩展了ApplicationContext,是专门为Web应用准备的，它允许从相对于Web根目录
+     * 的路径中装载配置文件完成初始化
+     * 3 在非Web应用下，Bean只有singleton和prototype两种作用域，WebApplicationContext为Bean添加了三个作用域
+     */
 }
