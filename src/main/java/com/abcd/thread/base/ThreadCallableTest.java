@@ -1,4 +1,4 @@
-package com.abcd.thread;
+package com.abcd.thread.base;
 
 
 import java.util.ArrayList;

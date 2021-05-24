@@ -1,4 +1,4 @@
-package com.abcd.thread;
+package com.abcd.thread.base;
 
 /**
  * @program: TestMaven

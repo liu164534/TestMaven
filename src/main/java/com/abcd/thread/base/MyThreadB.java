@@ -1,6 +1,4 @@
-package com.abcd.thread;
-
-import com.fasterxml.jackson.databind.ser.Serializers;
+package com.abcd.thread.base;
 
 /**
  * @program: TestMaven
