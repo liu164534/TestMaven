@@ -53,7 +53,7 @@ public class ApplicationRun {
  这就是自动装配
  3 @ComponentScan:其实是一个扫描器
  springmvc扫描的是service层，spring扫描的是controller层，扫描@Bean(就是为了实现依赖注入)
- @CompomentSacn 注解获取到@Bean注解所返回的值后，就会通州SpringBoot框架，让Springboot生成出一个对象，依赖注入
+ @CompomentSacn 注解获取到@Bean注解所返回的值后，就会通过SpringBoot框架，让Springboot生成出一个对象，依赖注入
  4.自动装配
  一定会用到@EnableAutoConfiguration
  -->这个注解继续看会发现仍然是一个复合注解

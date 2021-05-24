@@ -2,10 +2,7 @@ package com.abcd.javabase;
 
 import com.abcd.entity.Men;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -51,9 +48,11 @@ public class CreatObject {
         // 5 使用反序列化
         // 当我们使用反序列化的时候，jvm会给我们创建一个单独的对象。在反序列化的时候，jvm并不会调用任何构造函数
         // 为了反序列化一个对象，我们需要让我们的类实现Serializable接口 ,应该是反序列化class文件
-        ObjectInputStream in = new ObjectInputStream(new FileInputStream("filePath"));
-         Men menFive = (Men) in.readObject();
-         menFive.setName("使用反序列化创建对象");
-        System.out.println(menFive);
-     }
+//        ObjectInputStream in = new ObjectInputStream(new FileInputStream("filePath"));
+//         Men menFive = (Men) in.readObject();
+//         menFive.setName("使用反序列化创建对象");
+//        System.out.println(menFive);
+
+
+    }
 }
