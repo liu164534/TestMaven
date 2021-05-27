@@ -8,7 +8,7 @@ package com.abcd.thread.excute;
  **/
 public class ThreadTwo implements Runnable{
 
-    int count = 0;
+    static int count = 0;
 
     @Override
     public void run() {
