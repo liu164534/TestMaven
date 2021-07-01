@@ -1,5 +1,7 @@
 package com.abcd.thread.base;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @program: TestMaven
  * @description: Synchronized 关键字
@@ -70,7 +72,6 @@ public class SynchronizedInfo {
      * Java虚拟机在JIT编译的时候（可以简单理解为当某段代码即将第一次被编译的时候，又称为即时编译），通过对运行上下文的扫描，经过逃逸分析
      * 去除不可能存在的共享资源竞争的锁，通过这种方式消除没有必要的锁，可以节省毫无意义的请求锁时间
      */
-
 
 
 }
